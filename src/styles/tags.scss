@@ -1,0 +1,23 @@
+.tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      column-gap: 10px;
+      row-gap: 10px;
+      div {
+            border-radius: 10px;
+            background: #ff6060;
+            // padding-left: 30px;
+            // padding-right: 30px;
+            // height: 25px;
+            padding: 3px 30px 3px 30px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Montserrat;
+            font-size: 14px;
+            font-weight: 500;
+      }
+}

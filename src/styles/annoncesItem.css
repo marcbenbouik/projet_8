@@ -1,0 +1,52 @@
+.annonceGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 1240px;
+  gap: 30px;
+  padding: 50px;
+  box-sizing: border-box;
+  border-radius: 25px;
+  background-color: #f6f6f6;
+}
+.annonceGrid .annonceItem {
+  width: 340px;
+  height: 340px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 10px;
+  font-size: 18px;
+  overflow: hidden;
+  position: relative;
+}
+.annonceGrid .annonceItem img {
+  height: 100%;
+}
+.annonceGrid .annonceItem p {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  width: 100%;
+  text-align: left;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  margin: 0px;
+}
+
+@media screen and (max-width: 768px) {
+  .annonceGrid {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    background-color: unset;
+    padding: 0px;
+  }
+  .annonceGrid .annonceItem {
+    width: 335px;
+    height: 255px;
+  }
+}/*# sourceMappingURL=annoncesItem.css.map */
