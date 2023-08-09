@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+.volet {
+      .fixe {
+            padding: 10px 20px 10px 15px;
+            box-sizing: border-box;
+            border-radius: 5px;
+            background-color: #ff6060;
+            color: white;
+            height: 52px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0px;
+            font-family: "Montserrat", sans-serif;
+            i {
+                  cursor: pointer;
+            }
+      }
+      .slide-in {
+            background-color: #f6f6f6;
+            color: #ff6060;
+            border-radius: 10px 10px 5px 5px;
+            margin: 0px;
+            max-height: 0px;
+            overflow: hidden;
+            font-family: "Montserrat", sans-serif;
+            padding: 0px;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 18px;
+            line-height: 25px;
+            div {
+                  margin: 25px 20px 20px 20px;
+            }
+      }
+
+      .rotate {
+            transform: rotateZ(180);
+      }
+
+      ul {
+            list-style-type: none;
+      }
+
+      .visible {
+            // max-height: 500px; /* Ajustez cette valeur en fonction de vos besoins */
+            animation-name: slideDown;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+      }
+
+      .unvisible {
+            // max-height: 500px; /* Ajustez cette valeur en fonction de vos besoins */
+            animation-name: slideUp;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+      }
+}
+
+@keyframes slideDown {
+      0% {
+            max-height: 0px;
+      }
+      100% {
+            max-height: 500px;
+      }
+}
+
+@keyframes slideUp {
+      0% {
+            max-height: 200px;
+      }
+      100% {
+            max-height: 0px;
+      }
+}
+
+@media screen and (max-width: 768px) {
+      .volet {
+            .fixe {
+                  height: 32px;
+                  font-size: 13px;
+            }
+            .slide-in {
+                  font-size: 12px;
+            }
+      }
+}

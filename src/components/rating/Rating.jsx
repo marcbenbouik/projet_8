@@ -1,6 +1,6 @@
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "../../styles/rating.css";
+import "../rating/rating.css";
 
 function Rating(props) {
       const rating = props.rating;

@@ -1,0 +1,66 @@
+.annonceGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 50px;
+  box-sizing: border-box;
+  border-radius: 25px;
+  background-color: #f6f6f6;
+  margin: 45px 0px 50px 0px;
+}
+.annonceGrid .annonceItem {
+  width: 100%;
+  height: 100%;
+  max-width: 340px;
+  max-height: 340px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 10px;
+  font-size: 18px;
+  overflow: hidden;
+  position: relative;
+}
+.annonceGrid .annonceItem .gradient {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(white, black);
+  opacity: 0.3;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.annonceGrid .annonceItem img {
+  height: 100%;
+}
+.annonceGrid .annonceItem p {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  width: 100%;
+  text-align: left;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  z-index: 5;
+}
+
+@media screen and (max-width: 768px) {
+  .annonceGrid {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    background-color: unset;
+    padding: 22px 0px 27px 0px;
+    margin: 0px;
+  }
+  .annonceGrid .annonceItem {
+    width: 100%;
+    height: 100%;
+    max-width: 335px;
+    max-height: 255px;
+  }
+}/*# sourceMappingURL=gallery.css.map */

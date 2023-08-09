@@ -1,0 +1,78 @@
+
+      .logement {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            article {
+                  width: 100%;
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  margin-top: 30px;
+                  margin-bottom: 25px;
+                  // border: solid;
+                  .logementTitle {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        align-items: flex-start;
+                        row-gap: 20px;
+                        width: 100%;
+                  }
+                  .logementHost {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        align-items: center;
+                        row-gap: 15px;
+                        height: 100%;
+                  }
+            }
+            .logementCollapse {
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: space-between;
+                  align-items: flex-start;
+                  column-gap: 75px;
+                  margin-bottom: 50px;
+                  width: 100%;
+
+                  .child {
+                        max-width: 580px;
+                        width: 100%;
+                  }
+            }
+      }
+// 
+
+@media screen and (max-width: 768px) {
+      // .centrage {
+            .logement {
+                  article {
+                        flex-direction: column;
+                        margin-top: 15px;
+                        margin-bottom: 15px;
+                        .logementTitle {
+                              margin-bottom: 17px;
+                        }
+                        .logementHost {
+                              flex-direction: row-reverse;
+                              align-items: center;
+                              width: 100%;
+                        }
+                  }
+                  .logementCollapse {
+                        flex-direction: column;
+                        align-items: flex-start;
+                        row-gap: 20px;
+                        margin-bottom: 27px;
+
+                        .child {
+                              max-width: unset;
+                        }
+                  }
+            }
+      // }
+}

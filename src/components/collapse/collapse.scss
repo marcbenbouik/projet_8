@@ -13,11 +13,24 @@
             align-items: center;
             margin: 0px;
             font-family: "Montserrat", sans-serif;
-            i {
-                  cursor: pointer;
+            div {
+                  transform: rotate(0deg);
+                  transition: transform 0.5s ease;
+                  i {
+                        cursor: pointer;
+                  }
+            }
+            .rotateDown {
+                  transform: rotate(-180deg);
+            }
+            .rotateUp {
+                  transform: rotate(0);
             }
       }
       .slide-in {
+            // height: 0px;
+            // overflow: hidden;
+            // transition: height 1s ease-in-out;
             background-color: #f6f6f6;
             color: #ff6060;
             border-radius: 10px 10px 5px 5px;
@@ -30,17 +43,14 @@
             box-sizing: border-box;
             font-size: 18px;
             line-height: 25px;
-            div {
-                  margin: 25px 20px 20px 20px;
+            height: 100%;
+            overflow: auto;
+            .content {
+                  margin: 15px 20px 20px 20px;
             }
-      }
-
-      .rotate {
-            transform: rotateZ(180);
-      }
-
-      ul {
-            list-style-type: none;
+            ul {
+                  list-style-type: none;
+            }
       }
 
       .visible {
@@ -48,6 +58,7 @@
             animation-name: slideDown;
             animation-duration: 1s;
             animation-fill-mode: forwards;
+            // height: 100%;
       }
 
       .unvisible {
@@ -55,6 +66,8 @@
             animation-name: slideUp;
             animation-duration: 1s;
             animation-fill-mode: forwards;
+            // height: 0px;
+            // transform: height 0px;
       }
 }
 
@@ -63,13 +76,13 @@
             max-height: 0px;
       }
       100% {
-            max-height: 500px;
+            max-height: 200px;
       }
 }
 
 @keyframes slideUp {
       0% {
-            max-height: 500px;
+            max-height: 200px;
       }
       100% {
             max-height: 0px;

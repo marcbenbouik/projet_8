@@ -1,4 +1,4 @@
-import "../../styles/host.css";
+import "../host/host.css";
 
 function Host(props) {
       const host = props.host;

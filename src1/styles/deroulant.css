@@ -32,6 +32,9 @@
 .volet .slide-in div {
   margin: 25px 20px 20px 20px;
 }
+.volet .rotate {
+  transform: rotateZ(180);
+}
 .volet ul {
   list-style-type: none;
 }
@@ -56,7 +59,7 @@
 }
 @keyframes slideUp {
   0% {
-    max-height: 500px;
+    max-height: 200px;
   }
   100% {
     max-height: 0px;

@@ -1,0 +1,44 @@
+// @mixin media-max($_max-width) {
+//       @media screen and (max-width: $_max-width) {
+//         &{ @content; }
+//       }
+//     }
+
+.footer {
+      background-color: black;
+      color: white;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      height: 210px;
+      margin: 0px;
+      div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            row-gap: 29px;
+            padding: 0px;
+            img {
+                  margin: 0px;
+                  border: solid white;
+            }
+            p {
+                  font-size: 24px;
+                  margin: 0px 0px 29px 0px;
+            }
+      }
+}
+
+@media screen and (max-width: 768px) {
+      .footer {
+            div {
+                  p {
+                        font-size: 12px;
+                        width: 100px;
+                        margin: -15px 0px 45px 0px;
+                        text-align: center;
+                  }
+            }
+      }
+}

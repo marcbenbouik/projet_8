@@ -1,42 +1,37 @@
-import "../../styles/deroulant.css";
+import "../collapse/collapse.css";
 import { useState } from "react";
 // import { faChevronDown } from '@fortawesome/fontawesome-free';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+// import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Collapse({ title, info }) {
       const [display, setDisplay] = useState(false);
       const [animate, setAnimate] = useState(false);
+      console.log(display);
+
+      function HandleClick() {
+            setAnimate(true);
+            setDisplay(!display);
+      }
 
       return (
             <div className='volet'>
                   <div className='fixe'>
                         <h2>{title}</h2>
-                        <div>
-                              {display ? (
-                                    <i
-                                          onClick={() => {
-                                                setDisplay(false);
-                                                setAnimate(true);
-                                          }}
-                                    >
-                                          <FontAwesomeIcon icon={faChevronUp} />
-                                          {/* fleche bas */}
-                                    </i>
-                              ) : (
-                                    <i
-                                          onClick={() => {
-                                                setDisplay(true);
-                                                setAnimate(true);
-                                          }}
-                                    >
-                                          <FontAwesomeIcon
-                                                icon={faChevronDown}
-                                          />
-                                    </i>
-                              )}
+                        <div
+                              className={`${
+                                    animate
+                                          ? display
+                                                ? "rotateDown"
+                                                : "rotateUp"
+                                          : null
+                              }`}
+                        >
+                              <i onClick={HandleClick}>
+                                    <FontAwesomeIcon icon={faChevronUp} />
+                              </i>
                         </div>
                   </div>
                   <div
@@ -49,13 +44,13 @@ function Collapse({ title, info }) {
                         }`}
                   >
                         {Array.isArray(info) ? (
-                              <ul>
+                              <ul className='content'>
                                     {info.map((equip) => {
                                           return <li key={equip}>{equip}</li>;
                                     })}
                               </ul>
                         ) : (
-                              <div>{info}</div>
+                              <div className='content'>{info}</div>
                         )}
                   </div>
             </div>

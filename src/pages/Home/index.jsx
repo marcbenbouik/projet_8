@@ -1,7 +1,7 @@
-import Banner from "../../components/Banner";
-import AnnoncesGrid from "../../components/Card";
-import "../../styles/home.css";
+import Banner from "../../components/banner/Banner.jsx";
+import "./home.css";
 import banner from "../../images/banner.png";
+import Gallery from "../../components/gallery/Gallery";
 function Home() {
       return (
             <div className='home'>
@@ -9,7 +9,7 @@ function Home() {
                         image={banner}
                         titre={"Chez vous, partout et ailleurs"}
                   />
-                  <AnnoncesGrid />
+                  <Gallery />
             </div>
       );
 }

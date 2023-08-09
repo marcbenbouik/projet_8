@@ -1,4 +1,4 @@
-import "../../styles/title.css";
+import "../title/title.css";
 function Title(props) {
       const title = props.title;
       const locate = props.locate;
