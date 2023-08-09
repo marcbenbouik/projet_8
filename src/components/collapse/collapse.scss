@@ -13,8 +13,8 @@
             align-items: center;
             margin: 0px;
             font-family: "Montserrat", sans-serif;
+            border: solid;
             .collapse-icon {
-                  transform: rotate(0deg);
                   transition: transform 0.5s ease;
                   i {
                         cursor: pointer;

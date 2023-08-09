@@ -20,10 +20,9 @@ function Collapse({ title, info }) {
                   <div className='collapse-header' onClick={handleClick}>
                         <h2>{title}</h2>
                         <div
-                              className={
-                                    "collpase-icon" +
-                                    (isExpended ? "rotateDown" : "rotateUp")
-                              }
+                              className={`collapse-icon ${
+                                    isExpended ? "rotateDown" : "rotateUp"
+                              }`}
                         >
                               <i>
                                     <FontAwesomeIcon icon={faChevronUp} />
