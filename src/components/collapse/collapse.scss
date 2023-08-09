@@ -1,10 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 
 .collapse {
+      display: flex;
+      flex-direction: column;
+      position: relative;
       .collapse-header {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
             padding: 10px 20px 10px 15px;
             box-sizing: border-box;
-            border-radius: 5px;
+            border-radius: 10px;
             background-color: #ff6060;
             color: white;
             height: 52px;
@@ -13,7 +20,6 @@
             align-items: center;
             margin: 0px;
             font-family: "Montserrat", sans-serif;
-            border: solid;
             .collapse-icon {
                   transition: transform 0.5s ease;
                   i {
@@ -30,7 +36,8 @@
       .content {
             background-color: #f6f6f6;
             color: #ff6060;
-            border-radius: 10px 10px 5px 5px;
+            border-radius: 0px 0px 10px 10px;
+            margin: 47px 0px 0px 0px;
             overflow: hidden;
             font-family: "Montserrat", sans-serif;
             width: 100%;
@@ -56,6 +63,7 @@
             }
             .content {
                   font-size: 12px;
+                  margin-top: 27px;
             }
       }
 }
