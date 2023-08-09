@@ -1,5 +1,5 @@
 import Banner from "../../components/banner/Banner.jsx";
-import "./home.css";
+import "./home.scss";
 import banner from "../../images/banner.png";
 import Gallery from "../../components/gallery/Gallery";
 function Home() {

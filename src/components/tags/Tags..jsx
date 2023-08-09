@@ -1,4 +1,4 @@
-import "../tags/tags.css";
+import "../tags/tags.scss";
 
 function Tags(props) {
       const tags = props.tags;

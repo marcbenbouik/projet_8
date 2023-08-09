@@ -1,4 +1,4 @@
-import "../banner/banner.css";
+import "../banner/banner.scss";
 function Banner({ image, titre }) {
       return (
             <div className='banner'>

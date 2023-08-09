@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 
-.volet {
-      .fixe {
+.collapse {
+      .collapse-header {
             padding: 10px 20px 10px 15px;
             box-sizing: border-box;
             border-radius: 5px;
@@ -13,7 +13,7 @@
             align-items: center;
             margin: 0px;
             font-family: "Montserrat", sans-serif;
-            div {
+            collapse-icon {
                   transform: rotate(0deg);
                   transition: transform 0.5s ease;
                   i {
@@ -27,75 +27,34 @@
                   transform: rotate(0);
             }
       }
-      .slide-in {
-            // height: 0px;
-            // overflow: hidden;
-            // transition: height 1s ease-in-out;
+      .content {
             background-color: #f6f6f6;
             color: #ff6060;
             border-radius: 10px 10px 5px 5px;
-            margin: 0px;
-            max-height: 0px;
             overflow: hidden;
             font-family: "Montserrat", sans-serif;
-            padding: 0px;
             width: 100%;
             box-sizing: border-box;
             font-size: 18px;
             line-height: 25px;
-            height: 100%;
-            overflow: auto;
-            .content {
+            overflow: hidden;
+            transition: max-height 1s ease;
+            .inner {
                   margin: 15px 20px 20px 20px;
             }
             ul {
                   list-style-type: none;
             }
       }
-
-      .visible {
-            // max-height: 500px; /* Ajustez cette valeur en fonction de vos besoins */
-            animation-name: slideDown;
-            animation-duration: 1s;
-            animation-fill-mode: forwards;
-            // height: 100%;
-      }
-
-      .unvisible {
-            // max-height: 500px; /* Ajustez cette valeur en fonction de vos besoins */
-            animation-name: slideUp;
-            animation-duration: 1s;
-            animation-fill-mode: forwards;
-            // height: 0px;
-            // transform: height 0px;
-      }
-}
-
-@keyframes slideDown {
-      0% {
-            max-height: 0px;
-      }
-      100% {
-            max-height: 200px;
-      }
-}
-
-@keyframes slideUp {
-      0% {
-            max-height: 200px;
-      }
-      100% {
-            max-height: 0px;
-      }
 }
 
 @media screen and (max-width: 768px) {
-      .volet {
-            .fixe {
+      .collapse {
+            .collapse-header {
                   height: 32px;
                   font-size: 13px;
             }
-            .slide-in {
+            .content {
                   font-size: 12px;
             }
       }

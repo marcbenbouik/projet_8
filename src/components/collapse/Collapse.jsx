@@ -1,56 +1,48 @@
-import "../collapse/collapse.css";
-import { useState } from "react";
-// import { faChevronDown } from '@fortawesome/fontawesome-free';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import "../collapse/collapse.scss";
+import { useEffect, useRef, useState } from "react";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
-// import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Collapse({ title, info }) {
-      const [display, setDisplay] = useState(false);
-      const [animate, setAnimate] = useState(false);
-      console.log(display);
+      const [isExpended, setExpend] = useState(false);
+      const [contentHeight, setHeight] = useState(0);
+      const heightRef = useRef(null);
+      useEffect(() => {
+            setHeight(isExpended ? heightRef.current.scrollHeight : 0);
+      }, [isExpended]);
 
-      function HandleClick() {
-            setAnimate(true);
-            setDisplay(!display);
+      function handleClick() {
+            setExpend(!isExpended);
       }
 
       return (
-            <div className='volet'>
-                  <div className='fixe'>
+            <div className='collapse'>
+                  <div className='collapse-header' onClick={handleClick}>
                         <h2>{title}</h2>
                         <div
-                              className={`${
-                                    animate
-                                          ? display
-                                                ? "rotateDown"
-                                                : "rotateUp"
-                                          : null
-                              }`}
+                              className={
+                                    "collpase-icon" +
+                                    (isExpended ? "rotateDown" : "rotateUp")
+                              }
                         >
-                              <i onClick={HandleClick}>
+                              <i>
                                     <FontAwesomeIcon icon={faChevronUp} />
                               </i>
                         </div>
                   </div>
                   <div
-                        className={`slide-in ${
-                              animate
-                                    ? display
-                                          ? "visible"
-                                          : "unvisible"
-                                    : null
-                        }`}
+                        className='content'
+                        ref={heightRef}
+                        style={{ maxHeight: `${contentHeight}px` }}
                   >
                         {Array.isArray(info) ? (
-                              <ul className='content'>
+                              <ul className='inner'>
                                     {info.map((equip) => {
                                           return <li key={equip}>{equip}</li>;
                                     })}
                               </ul>
                         ) : (
-                              <div className='content'>{info}</div>
+                              <div className='inner'>{info}</div>
                         )}
                   </div>
             </div>

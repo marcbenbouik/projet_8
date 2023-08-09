@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { Fragment, useState } from "react";
-import "../carousel/carousel.css";
+import "../carousel/carousel.scss";
 function Carousel(props) {
       const pictures = props.picture;
       const [picNumber, setNumber] = useState(0);

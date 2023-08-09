@@ -4,8 +4,8 @@ import Collapse from "../../components/collapse/Collapse";
 import Tags from "../../components/tags/Tags.";
 import Rating from "../../components/rating/Rating";
 import Title from "../../components/title/Title";
-import Host from "../../components/host/host";
-import "../logement/logement.css";
+import Host from "../../components/host/Host";
+import "../logement/logement.scss";
 import Carousel from "../../components/carousel/Carousel";
 
 function Logement() {

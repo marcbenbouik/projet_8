@@ -8,7 +8,7 @@ import Logement from "./pages/logement";
 import Error from "./pages/error";
 import Footer from "./components/footer/Footer";
 import "../src/styles/reset.css";
-import "../src/styles/style.css";
+import "../src/styles/style.scss";
 
 ReactDOM.render(
       <React.StrictMode>

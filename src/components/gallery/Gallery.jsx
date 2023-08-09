@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { listeAnnonces } from "../../datas/listeAnnonces";
-import "./gallery.css";
+import "./gallery.scss";
 
 function Gallery() {
       return (
