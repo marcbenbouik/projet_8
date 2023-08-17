@@ -21,7 +21,6 @@ function Gallery() {
                               </Link>
                         );
                   })}
-                  <div className='gradient'></div>
             </div>
       );
 }

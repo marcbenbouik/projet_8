@@ -1,8 +1,9 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
-import { Fragment, useState } from "react";
+import { useState } from "react";
 import "../carousel/carousel.scss";
+
 function Carousel(props) {
       const pictures = props.picture;
       const [picNumber, setNumber] = useState(0);
@@ -35,7 +36,7 @@ function Carousel(props) {
                               />
                         </>
                   ) : null}
-                  <img src={pictures[picNumber]} alt='' />
+                  <img src={pictures[picNumber]} alt='interieurs du logement' />
             </div>
       );
 }
