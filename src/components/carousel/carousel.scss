@@ -7,22 +7,38 @@
       align-items: center;
       position: relative;
       border-radius: 25px;
+
       .chevronGauche {
             position: absolute;
             top: calc(50% - 40px);
             left: 23px;
             z-index: 5;
       }
+
       .chevronDroit {
             position: absolute;
             top: calc(50% - 40px);
             right: 23px;
             z-index: 5;
       }
+
+      .pictureIndex {
+            display: initial;
+            position: absolute;
+            bottom: 24px;
+            right: 50%;
+            font-family: Montserrat;
+            font-size: 18px;
+            font-weight: 500;
+            color: #FFF;
+      }
 }
 
 @media screen and (max-width: 768px) {
       .carousel {
             max-height: 255px;
+            .pictureIndex {
+                  display: none;
+            }
       }
 }

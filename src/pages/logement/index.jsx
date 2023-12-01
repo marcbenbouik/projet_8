@@ -44,7 +44,6 @@ function Logement() {
                               <Collapse
                                     title={"Equipements"}
                                     info={annonceActuelle[0].equipments}
-                                    classname='child'
                               />
                         </div>
                   </div>

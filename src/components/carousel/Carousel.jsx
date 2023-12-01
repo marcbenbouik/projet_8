@@ -37,6 +37,7 @@ function Carousel(props) {
                         </>
                   ) : null}
                   <img src={pictures[picNumber]} alt='interieurs du logement' />
+                  <p className="pictureIndex">{picNumber + 1}/{pictures.length}</p>
             </div>
       );
 }
